@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GITAM Lost and Found Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Primary Font: Forma DJR Display -->
+    <link href="https://fonts.cdnfonts.com/css/forma-djr-display" rel="stylesheet">
+    <!-- Secondary Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="images/gitam-logo.png" alt="GITAM Logo" class="gitam-logo">
+                <div class="header-text">
+                    <h2>Lost and Found Portal</h2>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="login-container">
+                <div class="slideshow-container">
+                    <div class="slideshow">
+                        <div class="slide fade">
+                            <img src="images/1.jpg" alt="Lost and Found 1">
+                        </div>
+                        <div class="slide fade">
+                            <img src="images/2.jpg" alt="Lost and Found 2">
+                        </div>
+                        <div class="slide fade">
+                            <img src="images/3.jpg" alt="Lost and Found 3">
+                        </div>
+                        <div class="slide fade">
+                            <img src="images/4.jpg" alt="Lost and Found 4">
+                        </div>
+                        <div class="slide fade">
+                            <img src="images/5.jpg" alt="Lost and Found 5">
+                        </div>
+                        <div class="slide fade">
+                            <img src="images/6.jpg" alt="Lost and Found 6">
+                        </div>
+                        <div class="slide fade">
+                            <img src="images/7.jpg" alt="Lost and Found 7">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-container">
+                    <div class="auth-box">
+                        <h2>Student Login</h2>
+                        <form id="login-form" class="auth-form">
+                            <div class="form-group">
+                                <label for="registration_no">Registration Number</label>
+                                <input type="text" id="registration_no" name="registration_no" required 
+                                       pattern="[0-9]{2}[A-Z]{3}[0-9]{4}" 
+                                       title="Please enter a valid GITAM registration number (e.g., 21BCE1234)"
+                                       placeholder="e.g., 21BCE1234">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="password" name="password" required 
+                                           minlength="8" placeholder="Enter your password">
+                                    <button type="button" class="password-toggle" id="login-password-toggle">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-primary">Login</button>
+                        </form>
+                        <p class="auth-switch">Don't have an account? <a href="#" id="show-register">Register</a></p>
+                    </div>
+
+                    <div class="auth-box" id="register-box" style="display: none;">
+                        <h2>Register</h2>
+                        <form id="register-form" class="auth-form">
+                            <div class="form-group">
+                                <label for="reg_registration_no">Registration Number</label>
+                                <input type="text" id="reg_registration_no" name="registration_no" required 
+                                       pattern="[0-9]{2}[A-Z]{3}[0-9]{4}" 
+                                       title="Please enter a valid GITAM registration number (e.g., 21BCE1234)"
+                                       placeholder="e.g., 21BCE1234">
+                            </div>
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" required 
+                                       placeholder="Enter your full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required 
+                                       placeholder="Enter your GITAM email">
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile_no">Mobile Number</label>
+                                <input type="tel" id="mobile_no" name="mobile_no" required 
+                                       pattern="[0-9]{10}" 
+                                       title="Please enter a valid 10-digit mobile number"
+                                       placeholder="Enter your mobile number">
+                            </div>
+                            <div class="form-group">
+                                <label for="reg_password">Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="reg_password" name="password" required 
+                                           minlength="8" placeholder="Create a password">
+                                    <button type="button" class="password-toggle" id="reg-password-toggle">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="confirm_password">Confirm Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="confirm_password" name="confirm_password" required 
+                                           minlength="8" placeholder="Confirm your password">
+                                    <button type="button" class="password-toggle" id="confirm-password-toggle">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="profile_picture">Profile Picture</label>
+                                <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+                                <small class="form-text">Optional: Upload your profile picture</small>
+                            </div>
+                            <button type="submit" class="btn-primary">Register</button>
+                        </form>
+                        <p class="auth-switch">Already have an account? <a href="#" id="show-login">Login</a></p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/slideshow.js"></script>
+</body>
+</html> 

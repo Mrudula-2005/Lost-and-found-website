@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - GITAM Lost and Found</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link href="https://fonts.cdnfonts.com/css/forma-djr-display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <img src="../images/gitam-logo.png" alt="GITAM Logo" class="gitam-logo">
+                <div class="header-text">
+                    <h2>Lost and Found Portal</h2>
+                </div>
+                <div class="profile-section">
+                    <div class="profile-wrapper" id="profile-wrapper">
+                        <img src="" alt="Profile" id="header-profile-img" class="profile-img">
+                        <span id="header-profile-name" class="profile-name"></span>
+                        <div class="sub-menu" id="subMenu">
+                            <a href="edit-profile.html" class="menu-item">
+                                <i class="fas fa-user-edit"></i>
+                                <span>Edit Profile</span>
+                            </a>
+                            <a href="#" class="menu-item" id="logout-link">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <nav class="main-nav">
+            <a href="home.html" class="nav-btn active">Home</a>
+            <a href="find.html" class="nav-btn">Find Object</a>
+            <a href="list.html" class="nav-btn">List Object</a>
+            <a href="notice.html" class="nav-btn">Issue Notice</a>
+        </nav>
+
+        <main>
+            <div class="welcome-message">
+                Hello <span id="user-name">User</span>! Welcome to GITAM Lost and Found Portal
+            </div>
+            <div class="dashboard">
+                <div class="dashboard-item">
+                    <h4>Recent Found Items</h4>
+                    <div id="recent-found"></div>
+                </div>
+                <div class="dashboard-item">
+                    <h4>Active Lost Notices</h4>
+                    <div id="recent-notices" class="notices-container">
+                        <!-- Lost notices will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Contact Details Popup -->
+    <div id="contact-popup" class="popup-overlay">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h3>Contact Details</h3>
+                <button class="close-popup">&times;</button>
+            </div>
+            <div class="popup-body">
+                <div class="contact-info">
+                    <p><strong>Name: </strong><span id="popup-name"></span></p>
+                    <p><strong>Contact: </strong><span id="popup-contact"></span></p>
+                    <p><strong>Item: </strong><span id="popup-item"></span></p>
+                    <p><strong>Location: </strong><span id="popup-location"></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup for item details -->
+    <div id="item-details-popup">
+        <div class="popup-content">
+            <!-- Popup content will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/home.js"></script>
+    <script src="../js/popup.js"></script>
+</body>
+</html> 
